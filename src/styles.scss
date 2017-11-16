@@ -7,3 +7,7 @@ $material-design-icons-font-path: '/fonts/';
 // import theming for all mdc components:
 //@import "material-components-web/material-components-web";
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+body {
+  margin: 0;
+}
