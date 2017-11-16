@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+
+$material-design-icons-font-path: '/fonts/';
+
+@import "material-design-icons-iconfont/dist/material-design-icons.scss";
+
+// import theming for all mdc components:
+//@import "material-components-web/material-components-web";
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
