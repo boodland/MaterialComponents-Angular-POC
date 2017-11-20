@@ -1,2 +1,24 @@
+<mat-sidenav-container class="navbar-sidenav-container">
+  <mat-sidenav #sidenav class="navbar-sidenav">
+    <mat-nav-list>
+      <mat-list-item>
+        <mat-icon matListIcon>dashboard</mat-icon>
+        <span>Subjects</span>
+      </mat-list-item>
+      <mat-list-item>
+        <mat-icon matListIcon>edit</mat-icon>
+        <span>Tests</span>
+      </mat-list-item>
+      <mat-list-item>
+        <mat-icon matListIcon>person</mat-icon>
+        <span>Tutors</span>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
 
-<app-navbar></app-navbar>
+  <app-navbar (menuClickEvent)="sidenav.open()"></app-navbar>
+</mat-sidenav-container>
+
+
+
+

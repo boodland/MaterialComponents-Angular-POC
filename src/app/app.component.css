@@ -1,0 +1,11 @@
+.navbar-sidenav-container {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  height: 100vh;
+}
+
+.navbar-sidenav {
+  padding: 20px 0;
+  min-width: 10vw;
+}
+
+

@@ -1,28 +1,7 @@
-<nav>
-  <mat-sidenav-container class="navbar-sidenav-container">
-    <mat-sidenav #sidenav class="navbar-sidenav">
-      <mat-nav-list>
-        <mat-list-item>
-          <mat-icon matListIcon>dashboard</mat-icon>
-          <span>Subjects</span>
-        </mat-list-item>
-        <mat-list-item>
-          <mat-icon matListIcon>edit</mat-icon>
-          <span>Tests</span>
-        </mat-list-item>
-        <mat-list-item>
-          <mat-icon matListIcon>person</mat-icon>
-          <span>Tutors</span>
-        </mat-list-item>
-      </mat-nav-list>
-    </mat-sidenav>
-
-    <mat-toolbar color="primary">
-      <button mat-icon-button (click)="sidenav.open()" class="navbar-action">
-        <mat-icon aria-label="menu">menu</mat-icon>
-      </button>
-      <span class="navbar-title">{{title}}</span>
-      <div class="navbar-action"></div>
-    </mat-toolbar>
-  </mat-sidenav-container>
-</nav>
+<mat-toolbar color="primary">
+  <button mat-icon-button (click)="menuClick()" class="navbar-action">
+    <mat-icon aria-label="menu">menu</mat-icon>
+  </button>
+  <span class="navbar-title">{{title}}</span>
+  <div class="navbar-action"></div>
+</mat-toolbar>
