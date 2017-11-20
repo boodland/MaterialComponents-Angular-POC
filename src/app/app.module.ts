@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { NavbarHeaderComponent } from './components/navbar-header/navbar-header.component';
 import { NavbarActionsComponent } from './components/navbar-actions/navbar-actions.component';
 import { SubjectsComponent } from './components/subjects/subjects.component';
+import { SubjectSummaryService } from './services/subject-summary.service';
 
 
 @NgModule({
@@ -24,7 +25,7 @@ import { SubjectsComponent } from './components/subjects/subjects.component';
     MaterialModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [SubjectSummaryService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { SubjectSummaryService } from '../../services/subject-summary.service';
+
 @Component({
   selector: 'app-subjects',
   templateUrl: './subjects.component.html',
@@ -7,20 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SubjectsComponent implements OnInit {
 
-  tiles = [
-    {text: 'One', color: 'lightblue'},
-    {text: 'Two', color: 'lightgreen'},
-    {text: 'Three', color: 'lightpink'},
-    {text: 'Four', color: '#DDBDF1' },
-    {text: 'Five', color: 'red'},
-    {text: 'Six', color: 'orange' },
-    {text: 'Seven', color: 'lightblue'},
-    {text: 'Eight', color: 'lightgreen'},
-  ];
+  subjectsSummary: any[];
 
-  constructor() { }
+  constructor(private subjectSummaryService: SubjectSummaryService) { }
+
+  getSubjectsSummary() {
+    this.subjectsSummary = this.subjectSummaryService.getSubjectsSummary();
+  }
 
   ngOnInit() {
+    this.getSubjectsSummary();
   }
 
 }
