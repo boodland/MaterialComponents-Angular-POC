@@ -2,6 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MaterialModule } from '../../shared/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { NavbarHeaderComponent } from './navbar-header.component';
 
 describe('NavbarComponent', () => {

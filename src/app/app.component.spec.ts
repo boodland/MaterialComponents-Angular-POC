@@ -1,20 +1,30 @@
 import { TestBed, async } from '@angular/core/testing';
-import { MaterialModule } from './shared/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { MaterialModule } from './shared/material.module';
+
 import { NavbarHeaderComponent } from './components/navbar-header/navbar-header.component';
+import { NavbarActionsComponent } from './components/navbar-actions/navbar-actions.component';
+import { SubjectsComponent } from './components/subjects/subjects.component';
+
 import { AppComponent } from './app.component';
+
+import { SubjectSummaryService } from './services/subject-summary.service';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
         AppComponent,
-        NavbarHeaderComponent
+        NavbarHeaderComponent,
+        NavbarActionsComponent,
+        SubjectsComponent
       ],
       imports: [
         MaterialModule,
         BrowserAnimationsModule
-      ]
+      ],
+      providers: [SubjectSummaryService]
     }).compileComponents();
   }));
 
@@ -24,9 +34,9 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   }));
 
-  it(`should have a app-navbar element`, async(() => {
+  it(`should have a span element`, async(() => {
     const fixture = TestBed.createComponent(AppComponent);
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('app-navbar').textContent).toBeTruthy();
+    expect(compiled.querySelector('span').textContent).toBeTruthy();
   }));
 });

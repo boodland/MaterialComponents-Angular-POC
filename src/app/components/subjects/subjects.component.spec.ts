@@ -1,6 +1,10 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { MaterialModule } from '../../shared/material.module';
+
 import { SubjectsComponent } from './subjects.component';
+
+import { SubjectSummaryService } from '../../services/subject-summary.service';
 
 describe('SubjectsComponent', () => {
   let component: SubjectsComponent;
@@ -8,7 +12,9 @@ describe('SubjectsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SubjectsComponent ]
+      declarations: [ SubjectsComponent ],
+      imports: [ MaterialModule ],
+      providers: [SubjectSummaryService]
     })
     .compileComponents();
   }));
