@@ -1,11 +1,11 @@
 import { Component, Output, OnInit, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'app-navbar',
-  templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss']
+  selector: 'app-navbar-header',
+  templateUrl: './navbar-header.component.html',
+  styleUrls: ['./navbar-header.component.scss']
 })
-export class NavbarComponent implements OnInit {
+export class NavbarHeaderComponent implements OnInit {
 
   title: String = 'Subject Hub';
 

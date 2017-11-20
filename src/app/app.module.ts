@@ -6,13 +6,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
+import { NavbarHeaderComponent } from './components/navbar-header/navbar-header.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent
+    NavbarHeaderComponent
   ],
   imports: [
     BrowserModule,
