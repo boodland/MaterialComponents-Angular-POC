@@ -1,5 +1,6 @@
 import { TestBed, async } from '@angular/core/testing';
 import { MaterialModule } from './shared/material.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { AppComponent } from './app.component';
 
@@ -11,7 +12,8 @@ describe('AppComponent', () => {
         NavbarComponent
       ],
       imports: [
-        MaterialModule
+        MaterialModule,
+        BrowserAnimationsModule
       ]
     }).compileComponents();
   }));

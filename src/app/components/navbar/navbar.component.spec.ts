@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MaterialModule } from '../../shared/material.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './navbar.component';
 
 describe('NavbarComponent', () => {
@@ -12,7 +13,8 @@ describe('NavbarComponent', () => {
     TestBed.configureTestingModule({
       declarations: [ NavbarComponent ],
       imports: [
-        MaterialModule
+        MaterialModule,
+        BrowserAnimationsModule
       ],
     })
     .compileComponents();
@@ -34,10 +36,10 @@ describe('NavbarComponent', () => {
     expect(component.title).toEqual(title);
   }));
 
-  it('should render title in a span tag', async(() => {
+  it('should render title in a navbar-title class', async(() => {
     fixture = TestBed.createComponent(NavbarComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('span').textContent).toContain(title);
+    expect(compiled.querySelector('.navbar-title').textContent).toContain(title);
   }));
 });
