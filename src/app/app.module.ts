@@ -8,13 +8,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { NavbarHeaderComponent } from './components/navbar-header/navbar-header.component';
 import { NavbarActionsComponent } from './components/navbar-actions/navbar-actions.component';
+import { SubjectsComponent } from './components/subjects/subjects.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarHeaderComponent,
-    NavbarActionsComponent
+    NavbarActionsComponent,
+    SubjectsComponent
   ],
   imports: [
     BrowserModule,

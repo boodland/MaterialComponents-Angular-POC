@@ -1,8 +1,11 @@
-<mat-sidenav-container class="navbar-sidenav-container">
-  <mat-sidenav #sidenav class="navbar-sidenav">
+<mat-sidenav-container class="app-sidenav-container">
+  <mat-sidenav #sidenav class="app-sidenav-menu">
     <app-navbar-actions></app-navbar-actions>
   </mat-sidenav>
   <app-navbar-header (menuClickEvent)="sidenav.open()"></app-navbar-header>
+  <main class="app-main-container">
+    <app-subjects></app-subjects>
+  </main>
 </mat-sidenav-container>
 
 
