@@ -4,7 +4,7 @@
   </mat-sidenav>
   <app-navbar-header (menuClickEvent)="sidenav.open()"></app-navbar-header>
   <main class="app-main-container">
-    <app-subjects-summary></app-subjects-summary>
+    <router-outlet></router-outlet>
   </main>
 </mat-sidenav-container>
 
