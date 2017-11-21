@@ -2,17 +2,17 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MaterialModule } from '../../shared/material.module';
 
-import { SubjectsComponent } from './subjects.component';
+import { SubjectsSummaryComponent } from './subjects-summary.component';
 
 import { SubjectSummaryService } from '../../services/subject-summary.service';
 
 describe('SubjectsComponent', () => {
-  let component: SubjectsComponent;
-  let fixture: ComponentFixture<SubjectsComponent>;
+  let component: SubjectsSummaryComponent;
+  let fixture: ComponentFixture<SubjectsSummaryComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SubjectsComponent ],
+      declarations: [ SubjectsSummaryComponent ],
       imports: [ MaterialModule ],
       providers: [SubjectSummaryService]
     })
@@ -20,7 +20,7 @@ describe('SubjectsComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SubjectsComponent);
+    fixture = TestBed.createComponent(SubjectsSummaryComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

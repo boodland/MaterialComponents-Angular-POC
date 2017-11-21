@@ -5,7 +5,7 @@ import { MaterialModule } from './shared/material.module';
 
 import { NavbarHeaderComponent } from './components/navbar-header/navbar-header.component';
 import { NavbarActionsComponent } from './components/navbar-actions/navbar-actions.component';
-import { SubjectsComponent } from './components/subjects/subjects.component';
+import { SubjectsSummaryComponent } from './components/subjects-summary/subjects-summary.component';
 
 import { AppComponent } from './app.component';
 
@@ -18,7 +18,7 @@ describe('AppComponent', () => {
         AppComponent,
         NavbarHeaderComponent,
         NavbarActionsComponent,
-        SubjectsComponent
+        SubjectsSummaryComponent
       ],
       imports: [
         MaterialModule,

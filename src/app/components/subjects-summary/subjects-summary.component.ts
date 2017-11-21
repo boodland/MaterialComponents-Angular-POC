@@ -3,11 +3,11 @@ import { Component, OnInit } from '@angular/core';
 import { SubjectSummaryService } from '../../services/subject-summary.service';
 
 @Component({
-  selector: 'app-subjects',
-  templateUrl: './subjects.component.html',
-  styleUrls: ['./subjects.component.scss']
+  selector: 'app-subjects-summary',
+  templateUrl: './subjects-summary.component.html',
+  styleUrls: ['./subjects-summary.component.scss']
 })
-export class SubjectsComponent implements OnInit {
+export class SubjectsSummaryComponent implements OnInit {
 
   subjectsSummary: any[];
 
