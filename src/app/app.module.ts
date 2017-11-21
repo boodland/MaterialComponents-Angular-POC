@@ -10,6 +10,7 @@ import { NavbarHeaderComponent } from './components/navbar-header/navbar-header.
 import { NavbarActionsComponent } from './components/navbar-actions/navbar-actions.component';
 import { SubjectsSummaryComponent } from './components/subjects-summary/subjects-summary.component';
 import { SubjectSummaryService } from './services/subject-summary.service';
+import { AppRoutingModule } from './shared/app-routing.module';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { SubjectSummaryService } from './services/subject-summary.service';
     BrowserModule,
     FormsModule,
     MaterialModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AppRoutingModule
   ],
   providers: [SubjectSummaryService],
   bootstrap: [AppComponent]
