@@ -33,10 +33,4 @@ describe('AppComponent', () => {
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
   }));
-
-  it(`should have a span element`, async(() => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('span').textContent).toBeTruthy();
-  }));
 });
