@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { SubjectSummary } from '../../models/subject-summary';
+
 import { SubjectSummaryService } from '../../services/subject-summary.service';
 
 @Component({
@@ -9,7 +11,7 @@ import { SubjectSummaryService } from '../../services/subject-summary.service';
 })
 export class SubjectsSummaryComponent implements OnInit {
 
-  subjectsSummary: any[];
+  subjectsSummary: SubjectSummary[];
 
   constructor(private subjectSummaryService: SubjectSummaryService) { }
 
