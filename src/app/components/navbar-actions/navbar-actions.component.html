@@ -1,6 +1,6 @@
 <mat-nav-list>
-  <mat-list-item *ngFor="let action of actions">
+  <a *ngFor="let action of actions" mat-list-item routerLink={{action.link}}>
     <mat-icon matListIcon>{{action.icon}}</mat-icon>
-    <span>{{action.title}}</span>
-  </mat-list-item>
+    {{ action.title }}
+  </a>
 </mat-nav-list>

@@ -8,10 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class NavbarActionsComponent implements OnInit {
 
   actions: any[] = [
-    { title: 'Dashboard', icon: 'apps' },
-    { title: 'Subjects', icon: 'school' },
-    { title: 'Tests', icon: 'edit' },
-    { title: 'Tutors', icon: 'person' }
+    { title: 'Dashboard', link: '/dashboard', icon: 'apps' },
+    { title: 'Subjects', link: '/subjects', icon: 'school' },
+    { title: 'Tests', link: '/tests', icon: 'edit' },
+    { title: 'Tutors', link: '/tutors', icon: 'person' }
   ];
 
   constructor() { }
