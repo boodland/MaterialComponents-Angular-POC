@@ -11,7 +11,7 @@
 
       <mat-card-content [ngStyle]="{'background-image': 'url(./assets/images/' + subjectSummary.image + '.jpg)'}">
         <div>{{subjectSummary.numOfSeats}} Seats</div>
-        <button mat-raised-button>View Subject</button>
+        <button mat-raised-button routerLink="/subjects/{{subjectSummary.id}}">View Subject</button>
       </mat-card-content>
       <mat-chip-list>
         <mat-chip color="primary" selected=true>
