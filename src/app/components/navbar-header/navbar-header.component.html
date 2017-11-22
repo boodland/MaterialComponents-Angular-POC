@@ -1,7 +1,12 @@
 <mat-toolbar color="primary" class="navbar-container">
-  <button mat-icon-button (click)="menuClick()" class="navbar-action">
-    <mat-icon aria-label="menu">menu</mat-icon>
-  </button>
+  <div [ngSwitch]="location?.path()">
+    <button *ngSwitchCase="'/dashboard'" mat-icon-button (click)="menuClick()" class="navbar-action">
+      <mat-icon aria-label="menu">menu</mat-icon>
+    </button>
+    <button *ngSwitchDefault mat-icon-button (click)="goBack()" class="navbar-action">
+      <mat-icon aria-label="menu">arrow_back</mat-icon>
+    </button>
+  </div>
   <span class="navbar-title">{{title}}</span>
   <div class="navbar-action"></div>
 </mat-toolbar>

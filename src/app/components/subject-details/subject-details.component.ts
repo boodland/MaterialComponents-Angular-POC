@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-subject-details',
@@ -12,8 +11,7 @@ export class SubjectDetailsComponent implements OnInit {
   selectedSubject: number;
 
   constructor(
-    private route: ActivatedRoute,
-    private location: Location
+    private route: ActivatedRoute
   ) { }
 
   ngOnInit() {

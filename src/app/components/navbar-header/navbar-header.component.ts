@@ -1,4 +1,5 @@
 import { Component, Output, OnInit, EventEmitter } from '@angular/core';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-navbar-header',
@@ -11,10 +12,14 @@ export class NavbarHeaderComponent implements OnInit {
 
   @Output() menuClickEvent: EventEmitter<string> = new EventEmitter();
 
-  constructor() { }
+  constructor(private location: Location) { }
 
   menuClick() {
     this.menuClickEvent.emit();
+  }
+
+  goBack() {
+    this.location.back();
   }
 
   ngOnInit() {
