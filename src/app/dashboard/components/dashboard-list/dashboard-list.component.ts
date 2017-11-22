@@ -5,19 +5,19 @@ import { SubjectSummary } from '../../models/subject-summary';
 import { SubjectSummaryService } from '../../services/subject-summary.service';
 
 @Component({
-  selector: 'app-subjects-summary',
-  templateUrl: './subjects-summary.component.html',
-  styleUrls: ['./subjects-summary.component.scss']
+  selector: 'app-dashboard-list',
+  templateUrl: './dashboard-list.component.html',
+  styleUrls: ['./dashboard-list.component.scss']
 })
-export class SubjectsSummaryComponent implements OnInit {
+export class DashboardListComponent implements OnInit {
 
-  subjectsSummary: SubjectSummary[];
+  dashboardList: SubjectSummary[];
 
   constructor(private subjectSummaryService: SubjectSummaryService) { }
 
   getSubjectsSummary() {
     this.subjectSummaryService.getSubjectsSummary()
-      .subscribe(subjectsSummary => this.subjectsSummary = subjectsSummary);
+      .subscribe(subjectsSummary => this.dashboardList = subjectsSummary);
   }
 
   ngOnInit() {

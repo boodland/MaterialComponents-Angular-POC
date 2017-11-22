@@ -1,0 +1,25 @@
+
+<div class="flex-container">
+  <mat-card class="flex-item" *ngFor="let dashboardItem of dashboardList">
+      <mat-card-header>
+        <mat-card-title>{{dashboardItem.title | uppercase}}</mat-card-title>
+        <mat-card-subtitle>
+          <mat-icon>event</mat-icon>
+          <span>{{dashboardItem.assessmentDate.toDateString()}}</span>
+        </mat-card-subtitle>
+      </mat-card-header>
+
+      <mat-card-content [ngStyle]="{'background-image': 'url(./assets/images/' + dashboardItem.image + '.jpg)'}">
+        <div>{{dashboardItem.numOfSeats}} Seats</div>
+        <button mat-raised-button routerLink="/subjects/{{dashboardItem.id}}">View Subject</button>
+      </mat-card-content>
+      <mat-chip-list>
+        <mat-chip color="primary" selected=true>
+          {{dashboardItem.numOfTests}} Tests
+        </mat-chip>
+        <mat-chip color="accent" selected=true>
+            {{dashboardItem.numOfTutors}} Tutors</mat-chip>
+      </mat-chip-list>
+    </mat-card>
+</div>
+

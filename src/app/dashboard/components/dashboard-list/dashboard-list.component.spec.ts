@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MaterialModule } from '../../../shared/material.module';
 
-import { SubjectsSummaryComponent } from './subjects-summary.component';
+import { DashboardListComponent } from './dashboard-list.component';
 
 import { SubjectSummaryService } from '../../services/subject-summary.service';
 
@@ -13,12 +13,12 @@ import { SubjectDetailsComponent } from '../../../components/subject-details/sub
 import { APP_BASE_HREF } from '@angular/common';
 
 describe('SubjectsComponent', () => {
-  let component: SubjectsSummaryComponent;
-  let fixture: ComponentFixture<SubjectsSummaryComponent>;
+  let component: DashboardListComponent;
+  let fixture: ComponentFixture<DashboardListComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SubjectsSummaryComponent, SubjectDetailsComponent ],
+      declarations: [ DashboardListComponent, SubjectDetailsComponent ],
       imports: [ MaterialModule, AppRoutingModule ],
       providers: [SubjectSummaryService, { provide: APP_BASE_HREF, useValue: '/' }]
     })
@@ -26,7 +26,7 @@ describe('SubjectsComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SubjectsSummaryComponent);
+    fixture = TestBed.createComponent(DashboardListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
