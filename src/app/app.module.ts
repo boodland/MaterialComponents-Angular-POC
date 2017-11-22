@@ -11,6 +11,7 @@ import { NavbarActionsComponent } from './components/navbar-actions/navbar-actio
 import { SubjectsSummaryComponent } from './components/subjects-summary/subjects-summary.component';
 import { SubjectSummaryService } from './services/subject-summary.service';
 import { AppRoutingModule } from './shared/app-routing.module';
+import { SubjectDetailsComponent } from './components/subject-details/subject-details.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { AppRoutingModule } from './shared/app-routing.module';
     AppComponent,
     NavbarHeaderComponent,
     NavbarActionsComponent,
-    SubjectsSummaryComponent
+    SubjectsSummaryComponent,
+    SubjectDetailsComponent
   ],
   imports: [
     BrowserModule,
