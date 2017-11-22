@@ -13,6 +13,7 @@ import { SubjectSummaryService } from './services/subject-summary.service';
 import { AppRoutingModule } from './shared/app-routing.module';
 import { SubjectDetailsComponent } from './components/subject-details/subject-details.component';
 import { SubjectService } from './services/subject.service';
+import { NavigationModule } from './navigation/navigation/navigation.module';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { SubjectService } from './services/subject.service';
     FormsModule,
     MaterialModule,
     BrowserAnimationsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NavigationModule
   ],
   providers: [SubjectSummaryService, SubjectService],
   bootstrap: [AppComponent]
