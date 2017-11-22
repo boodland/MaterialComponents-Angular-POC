@@ -2,12 +2,12 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 
-import { SubjectSummary } from '../models/subject-summary';
+import { DashboardItem } from '../models/dashboard-item';
 
 @Injectable()
 export class SubjectSummaryService {
 
-  subjectsSummary: SubjectSummary[] = [
+  subjectsSummary: DashboardItem[] = [
     {
       id: 1, title: 'History', assessmentDate: new Date(2018, 4),
       numOfSeats: 680, numOfTutors: 345, numOfTests: 390, image: 'history'
@@ -44,7 +44,7 @@ export class SubjectSummaryService {
 
   constructor() { }
 
-  getSubjectsSummary(): Observable<SubjectSummary[]> {
+  getSubjectsSummary(): Observable<DashboardItem[]> {
     return of(this.subjectsSummary);
   }
 }

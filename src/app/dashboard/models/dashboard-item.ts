@@ -1,4 +1,4 @@
-export class SubjectSummary {
+export class DashboardItem {
   id: number;
   title: string;
   assessmentDate: Date;

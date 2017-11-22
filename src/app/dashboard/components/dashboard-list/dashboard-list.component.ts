@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { SubjectSummary } from '../../models/subject-summary';
+import { DashboardItem } from '../../models/dashboard-item';
 
 import { SubjectSummaryService } from '../../services/subject-summary.service';
 
@@ -11,7 +11,7 @@ import { SubjectSummaryService } from '../../services/subject-summary.service';
 })
 export class DashboardListComponent implements OnInit {
 
-  dashboardList: SubjectSummary[];
+  dashboardList: DashboardItem[];
 
   constructor(private subjectSummaryService: SubjectSummaryService) { }
 
