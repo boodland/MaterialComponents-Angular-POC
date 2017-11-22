@@ -1,33 +1,28 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { MaterialModule } from './shared/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-
-import { AppComponent } from './app.component';
+import { MaterialModule } from './shared/material.module';
 import { AppRoutingModule } from './shared/app-routing.module';
-import { SubjectDetailsComponent } from './components/subject-details/subject-details.component';
-import { SubjectService } from './services/subject.service';
 import { NavigationModule } from './navigation/navigation.module';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { SubjectModule } from './subject/subject.module';
 
+import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    SubjectDetailsComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    MaterialModule,
     BrowserAnimationsModule,
+    MaterialModule,
     AppRoutingModule,
     NavigationModule,
     DashboardModule,
     SubjectModule
   ],
-  providers: [SubjectService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

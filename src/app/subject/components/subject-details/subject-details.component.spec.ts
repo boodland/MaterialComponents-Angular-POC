@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AppRoutingModule } from '../../shared/app-routing.module';
-import { DashboardModule } from '../../dashboard/dashboard.module';
+import { AppRoutingModule } from '../../../shared/app-routing.module';
+import { DashboardModule } from '../../../dashboard/dashboard.module';
 
 import { SubjectDetailsComponent } from './subject-details.component';
 
