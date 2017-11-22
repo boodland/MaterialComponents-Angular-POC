@@ -16,7 +16,8 @@ export class SubjectsSummaryComponent implements OnInit {
   constructor(private subjectSummaryService: SubjectSummaryService) { }
 
   getSubjectsSummary() {
-    this.subjectsSummary = this.subjectSummaryService.getSubjectsSummary();
+    this.subjectSummaryService.getSubjectsSummary()
+      .subscribe(subjectsSummary => this.subjectsSummary = subjectsSummary);
   }
 
   ngOnInit() {

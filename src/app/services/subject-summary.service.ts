@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
+import { of } from 'rxjs/observable/of';
 
 import { SubjectSummary } from '../models/subject-summary';
 
@@ -42,7 +44,7 @@ export class SubjectSummaryService {
 
   constructor() { }
 
-  getSubjectsSummary(): SubjectSummary[] {
-    return this.subjectsSummary;
+  getSubjectsSummary(): Observable<SubjectSummary[]> {
+    return of(this.subjectsSummary);
   }
 }
