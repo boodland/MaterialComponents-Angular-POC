@@ -11,6 +11,7 @@ import { AppRoutingModule } from './shared/app-routing.module';
 import { SubjectDetailsComponent } from './components/subject-details/subject-details.component';
 import { SubjectService } from './services/subject.service';
 import { NavigationModule } from './navigation/navigation.module';
+import { DashboardModule } from './dashboard/dashboard.module';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { NavigationModule } from './navigation/navigation.module';
     MaterialModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    NavigationModule
+    NavigationModule,
+    DashboardModule
   ],
   providers: [SubjectSummaryService, SubjectService],
   bootstrap: [AppComponent]
