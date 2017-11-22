@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { SubjectsSummaryComponent } from '../components/subjects-summary/subjects-summary.component';
+import { SubjectsSummaryComponent } from '../dashboard/components/subjects-summary/subjects-summary.component';
 import { SubjectDetailsComponent } from '../components/subject-details/subject-details.component';
 
 
