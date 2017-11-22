@@ -10,6 +10,7 @@ import { SubjectDetailsComponent } from './components/subject-details/subject-de
 import { SubjectService } from './services/subject.service';
 import { NavigationModule } from './navigation/navigation.module';
 import { DashboardModule } from './dashboard/dashboard.module';
+import { SubjectModule } from './subject/subject.module';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { DashboardModule } from './dashboard/dashboard.module';
     BrowserAnimationsModule,
     AppRoutingModule,
     NavigationModule,
-    DashboardModule
+    DashboardModule,
+    SubjectModule
   ],
   providers: [SubjectService],
   bootstrap: [AppComponent]
