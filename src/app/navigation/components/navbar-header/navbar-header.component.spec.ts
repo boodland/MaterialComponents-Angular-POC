@@ -2,8 +2,13 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MaterialModule } from '../../../shared/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AppRoutingModule } from '../../../shared/app-routing.module';
+import { DashboardModule } from '../../../dashboard/dashboard.module';
 
 import { NavbarHeaderComponent } from './navbar-header.component';
+import { SubjectModule } from '../../../subject/subject.module';
+
+import { APP_BASE_HREF } from '@angular/common';
 
 describe('NavbarComponent', () => {
   let component: NavbarHeaderComponent;
@@ -14,9 +19,13 @@ describe('NavbarComponent', () => {
     TestBed.configureTestingModule({
       declarations: [ NavbarHeaderComponent ],
       imports: [
+        BrowserAnimationsModule,
+        AppRoutingModule,
         MaterialModule,
-        BrowserAnimationsModule
+        DashboardModule,
+        SubjectModule
       ],
+      providers: [{ provide: APP_BASE_HREF, useValue: '/' }]
     })
     .compileComponents();
   }));

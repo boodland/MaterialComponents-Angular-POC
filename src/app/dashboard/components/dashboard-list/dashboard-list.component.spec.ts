@@ -8,7 +8,7 @@ import { DashboardService } from '../../services/dashboard.service';
 
 import { AppRoutingModule } from '../../../shared/app-routing.module';
 
-import { SubjectDetailsComponent } from '../../../components/subject-details/subject-details.component';
+import { SubjectModule } from '../../../subject/subject.module';
 
 import { APP_BASE_HREF } from '@angular/common';
 
@@ -18,8 +18,8 @@ describe('DashboardListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DashboardListComponent, SubjectDetailsComponent ],
-      imports: [ MaterialModule, AppRoutingModule ],
+      declarations: [ DashboardListComponent ],
+      imports: [ MaterialModule, AppRoutingModule, SubjectModule ],
       providers: [DashboardService, { provide: APP_BASE_HREF, useValue: '/' }]
     })
     .compileComponents();

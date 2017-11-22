@@ -2,29 +2,30 @@ import { TestBed, async } from '@angular/core/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MaterialModule } from './shared/material.module';
-
-import { NavbarHeaderComponent } from './components/navbar-header/navbar-header.component';
-import { NavbarActionsComponent } from './components/navbar-actions/navbar-actions.component';
-import { SubjectsSummaryComponent } from './components/subjects-summary/subjects-summary.component';
+import { NavigationModule } from './navigation/navigation.module';
+import { AppRoutingModule } from './shared/app-routing.module';
+import { DashboardModule } from './dashboard/dashboard.module';
+import { SubjectModule } from './subject/subject.module';
 
 import { AppComponent } from './app.component';
 
-import { SubjectSummaryService } from './services/subject-summary.service';
+import { APP_BASE_HREF } from '@angular/common';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        AppComponent,
-        NavbarHeaderComponent,
-        NavbarActionsComponent,
-        SubjectsSummaryComponent
+        AppComponent
       ],
       imports: [
+        BrowserAnimationsModule,
         MaterialModule,
-        BrowserAnimationsModule
+        AppRoutingModule,
+        NavigationModule,
+        DashboardModule,
+        SubjectModule
       ],
-      providers: [SubjectSummaryService]
+      providers: [{ provide: APP_BASE_HREF, useValue: '/' }]
     }).compileComponents();
   }));
 
