@@ -12,6 +12,7 @@ import { SubjectsSummaryComponent } from './components/subjects-summary/subjects
 import { SubjectSummaryService } from './services/subject-summary.service';
 import { AppRoutingModule } from './shared/app-routing.module';
 import { SubjectDetailsComponent } from './components/subject-details/subject-details.component';
+import { SubjectService } from './services/subject.service';
 
 
 @NgModule({
@@ -29,7 +30,7 @@ import { SubjectDetailsComponent } from './components/subject-details/subject-de
     BrowserAnimationsModule,
     AppRoutingModule
   ],
-  providers: [SubjectSummaryService],
+  providers: [SubjectSummaryService, SubjectService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
