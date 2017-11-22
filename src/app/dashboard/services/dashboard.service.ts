@@ -5,7 +5,7 @@ import { of } from 'rxjs/observable/of';
 import { DashboardItem } from '../models/dashboard-item';
 
 @Injectable()
-export class SubjectSummaryService {
+export class DashboardService {
 
   subjectsSummary: DashboardItem[] = [
     {
@@ -44,7 +44,7 @@ export class SubjectSummaryService {
 
   constructor() { }
 
-  getSubjectsSummary(): Observable<DashboardItem[]> {
+  getDashboard(): Observable<DashboardItem[]> {
     return of(this.subjectsSummary);
   }
 }

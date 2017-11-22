@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { DashboardItem } from '../../models/dashboard-item';
 
-import { SubjectSummaryService } from '../../services/subject-summary.service';
+import { DashboardService } from '../../services/dashboard.service';
 
 @Component({
   selector: 'app-dashboard-list',
@@ -13,15 +13,15 @@ export class DashboardListComponent implements OnInit {
 
   dashboardList: DashboardItem[];
 
-  constructor(private subjectSummaryService: SubjectSummaryService) { }
+  constructor(private subjectSummaryService: DashboardService) { }
 
-  getSubjectsSummary() {
-    this.subjectSummaryService.getSubjectsSummary()
-      .subscribe(subjectsSummary => this.dashboardList = subjectsSummary);
+  getDashboard() {
+    this.subjectSummaryService.getDashboard()
+      .subscribe(dashboardList => this.dashboardList = dashboardList);
   }
 
   ngOnInit() {
-    this.getSubjectsSummary();
+    this.getDashboard();
   }
 
 }

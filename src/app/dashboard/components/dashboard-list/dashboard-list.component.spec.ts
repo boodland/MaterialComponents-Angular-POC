@@ -4,7 +4,7 @@ import { MaterialModule } from '../../../shared/material.module';
 
 import { DashboardListComponent } from './dashboard-list.component';
 
-import { SubjectSummaryService } from '../../services/subject-summary.service';
+import { DashboardService } from '../../services/dashboard.service';
 
 import { AppRoutingModule } from '../../../shared/app-routing.module';
 
@@ -12,7 +12,7 @@ import { SubjectDetailsComponent } from '../../../components/subject-details/sub
 
 import { APP_BASE_HREF } from '@angular/common';
 
-describe('SubjectsComponent', () => {
+describe('DashboardListComponent', () => {
   let component: DashboardListComponent;
   let fixture: ComponentFixture<DashboardListComponent>;
 
@@ -20,7 +20,7 @@ describe('SubjectsComponent', () => {
     TestBed.configureTestingModule({
       declarations: [ DashboardListComponent, SubjectDetailsComponent ],
       imports: [ MaterialModule, AppRoutingModule ],
-      providers: [SubjectSummaryService, { provide: APP_BASE_HREF, useValue: '/' }]
+      providers: [DashboardService, { provide: APP_BASE_HREF, useValue: '/' }]
     })
     .compileComponents();
   }));

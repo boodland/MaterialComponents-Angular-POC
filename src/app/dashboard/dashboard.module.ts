@@ -5,12 +5,12 @@ import { MaterialModule } from './../shared/material.module';
 import { AppRoutingModule } from './../shared/app-routing.module';
 
 import { DashboardListComponent } from './components/dashboard-list/dashboard-list.component';
-import { SubjectSummaryService } from './services/subject-summary.service';
+import { DashboardService } from './services/dashboard.service';
 
 @NgModule({
   imports: [CommonModule, MaterialModule, AppRoutingModule],
   declarations: [DashboardListComponent],
   exports: [DashboardListComponent],
-  providers: [SubjectSummaryService]
+  providers: [DashboardService]
 })
 export class DashboardModule { }
