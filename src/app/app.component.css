@@ -9,6 +9,10 @@
 }
 
 .app-main-container {
+  margin-top: 64px;
+}
+
+@media (max-width: 600px){
   margin-top: 56px;
 }
 

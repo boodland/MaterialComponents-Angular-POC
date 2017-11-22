@@ -1,6 +1,6 @@
 <mat-sidenav-container class="app-sidenav-container">
   <mat-sidenav #sidenav class="app-sidenav-menu">
-    <app-navbar-actions></app-navbar-actions>
+    <app-navbar-actions (actionClickEvent)="sidenav.close()"></app-navbar-actions>
   </mat-sidenav>
   <app-navbar-header (menuClickEvent)="sidenav.open()"></app-navbar-header>
   <main class="app-main-container">

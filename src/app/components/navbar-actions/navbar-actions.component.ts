@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Output, OnInit, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-navbar-actions',
@@ -14,7 +14,13 @@ export class NavbarActionsComponent implements OnInit {
     { title: 'Tutors', link: '/tutors', icon: 'person' }
   ];
 
+  @Output() actionClickEvent: EventEmitter<string> = new EventEmitter();
+
   constructor() { }
+
+  actionClick() {
+    this.actionClickEvent.emit();
+  }
 
   ngOnInit() {
   }
