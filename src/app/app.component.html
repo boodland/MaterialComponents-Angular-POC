@@ -3,8 +3,8 @@
     <app-navbar-actions (actionClickEvent)="sidenav.close()"></app-navbar-actions>
   </mat-sidenav>
   <app-navbar-header (menuClickEvent)="sidenav.open()"></app-navbar-header>
-  <main class="app-main-container">
-    <router-outlet></router-outlet>
+  <main class="app-main-container" [@routerAnimation]="getState(routerOutlet)">
+    <router-outlet #routerOutlet="outlet"></router-outlet>
   </main>
 </mat-sidenav-container>
 

@@ -3,9 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { SubjectDetailsComponent } from '../subject/components/subject-details/subject-details.component';
 
-
 const subjectRoutes: Routes = [
-  { path: 'subject/:id', component: SubjectDetailsComponent }
+  { path: 'subject/:id', component: SubjectDetailsComponent, data: { state : 'subject-details'}  }
 ];
 
 @NgModule({
