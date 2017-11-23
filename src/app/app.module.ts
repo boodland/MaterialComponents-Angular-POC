@@ -2,11 +2,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { AppRoutingModule } from './shared/app-routing.module';
 import { MaterialModule } from './shared/material.module';
 import { NavigationModule } from './navigation/navigation.module';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { SubjectModule } from './subject/subject.module';
+import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 
@@ -17,11 +17,11 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    AppRoutingModule,
     MaterialModule,
     NavigationModule,
     DashboardModule,
-    SubjectModule
+    SubjectModule,
+    AppRoutingModule
   ],
   bootstrap: [AppComponent]
 })
