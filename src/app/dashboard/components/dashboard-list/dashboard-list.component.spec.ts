@@ -1,14 +1,12 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MaterialModule } from '../../../shared/material.module';
+import { DashboardRoutingModule } from '../../dashboard-routing.module';
+import { AppRoutingModule } from '../../../app-routing.module';
 
 import { DashboardListComponent } from './dashboard-list.component';
 
 import { DashboardService } from '../../services/dashboard.service';
-
-import { AppRoutingModule } from '../../../shared/app-routing.module';
-
-import { SubjectModule } from '../../../subject/subject.module';
 
 import { APP_BASE_HREF } from '@angular/common';
 
@@ -18,9 +16,16 @@ describe('DashboardListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [
+        MaterialModule,
+        DashboardRoutingModule,
+        AppRoutingModule
+      ],
       declarations: [ DashboardListComponent ],
-      imports: [ MaterialModule, AppRoutingModule, SubjectModule ],
-      providers: [DashboardService, { provide: APP_BASE_HREF, useValue: '/' }]
+      providers: [
+        DashboardService,
+        { provide: APP_BASE_HREF, useValue: '/' }
+      ]
     })
     .compileComponents();
   }));

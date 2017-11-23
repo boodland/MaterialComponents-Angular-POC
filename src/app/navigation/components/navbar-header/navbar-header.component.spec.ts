@@ -1,31 +1,27 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MaterialModule } from '../../../shared/material.module';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AppRoutingModule } from '../../../shared/app-routing.module';
-import { DashboardModule } from '../../../dashboard/dashboard.module';
+import { AppRoutingModule } from '../../../app-routing.module';
 
 import { NavbarHeaderComponent } from './navbar-header.component';
-import { SubjectModule } from '../../../subject/subject.module';
 
 import { APP_BASE_HREF } from '@angular/common';
 
-describe('NavbarComponent', () => {
+describe('NavbarHeaderComponent', () => {
   let component: NavbarHeaderComponent;
   let fixture: ComponentFixture<NavbarHeaderComponent>;
   const title: String = 'Subject Hub';
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NavbarHeaderComponent ],
       imports: [
         BrowserAnimationsModule,
-        AppRoutingModule,
         MaterialModule,
-        DashboardModule,
-        SubjectModule
+        AppRoutingModule
       ],
-      providers: [{ provide: APP_BASE_HREF, useValue: '/' }]
+      declarations: [ NavbarHeaderComponent ],
+      providers: [ { provide: APP_BASE_HREF, useValue: '/' } ]
     })
     .compileComponents();
   }));

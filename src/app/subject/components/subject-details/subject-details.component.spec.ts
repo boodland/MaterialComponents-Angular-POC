@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AppRoutingModule } from '../../../shared/app-routing.module';
-import { DashboardModule } from '../../../dashboard/dashboard.module';
+import { SubjectRoutingModule } from '../../subject-routing.module';
+import { AppRoutingModule } from '../../../app-routing.module';
 
 import { SubjectDetailsComponent } from './subject-details.component';
 
@@ -13,9 +13,12 @@ describe('SubjectDetailsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [
+        SubjectRoutingModule,
+        AppRoutingModule
+      ],
       declarations: [ SubjectDetailsComponent ],
-      imports: [AppRoutingModule, DashboardModule],
-      providers: [{ provide: APP_BASE_HREF, useValue: '/' }]
+      providers: [ { provide: APP_BASE_HREF, useValue: '/' } ]
     })
     .compileComponents();
   }));
