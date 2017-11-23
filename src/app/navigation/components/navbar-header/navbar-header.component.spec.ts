@@ -1,12 +1,11 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { APP_BASE_HREF } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MaterialModule } from '../../../shared/material.module';
 import { AppRoutingModule } from '../../../app-routing.module';
 
 import { NavbarHeaderComponent } from './navbar-header.component';
-
-import { APP_BASE_HREF } from '@angular/common';
 
 describe('NavbarHeaderComponent', () => {
   let component: NavbarHeaderComponent;

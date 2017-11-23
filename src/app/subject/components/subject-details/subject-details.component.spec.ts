@@ -1,11 +1,10 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { APP_BASE_HREF } from '@angular/common';
 
 import { SubjectRoutingModule } from '../../subject-routing.module';
 import { AppRoutingModule } from '../../../app-routing.module';
 
 import { SubjectDetailsComponent } from './subject-details.component';
-
-import { APP_BASE_HREF } from '@angular/common';
 
 describe('SubjectDetailsComponent', () => {
   let component: SubjectDetailsComponent;

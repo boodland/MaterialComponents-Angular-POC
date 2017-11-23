@@ -1,4 +1,5 @@
 import { TestBed, async } from '@angular/core/testing';
+import { APP_BASE_HREF } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MaterialModule } from './shared/material.module';
@@ -6,8 +7,6 @@ import { NavigationModule } from './navigation/navigation.module';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-
-import { APP_BASE_HREF } from '@angular/common';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
