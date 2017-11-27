@@ -12,6 +12,11 @@
   margin-top: 64px;
 }
 
+div {
+  overflow: auto;
+  height: 100%;
+}
+
 @media (max-width: 600px){
   .app-main-container {
     margin-top: 56px;

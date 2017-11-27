@@ -2,10 +2,13 @@
   <mat-sidenav #sidenav class="app-sidenav-menu">
     <app-navbar-actions (actionClickEvent)="sidenav.close()"></app-navbar-actions>
   </mat-sidenav>
-  <app-navbar-header (menuClickEvent)="sidenav.open()"></app-navbar-header>
-  <main class="app-main-container" [@routerAnimation]="getState(routerOutlet)">
-    <router-outlet #routerOutlet="outlet"></router-outlet>
-  </main>
+  <div #myScrollContainer>
+    <app-navbar-header (menuClickEvent)="sidenav.open()"></app-navbar-header>
+    <main  class="app-main-container"
+      [@routerAnimation]="{value: getState(routerOutlet), params: {topPosition: topPosition}}">
+      <router-outlet #routerOutlet="outlet"></router-outlet>
+    </main>
+  </div>
 </mat-sidenav-container>
 
 
