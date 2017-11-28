@@ -1,0 +1,59 @@
+.mat-list-item .mat-list-avatar {
+  border-radius: 0;
+  height: 80%;
+  width: auto;
+}
+
+span.subject-title.mat-line {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.subject-category {
+  text-align: center;
+  vertical-align: middle;
+  font-size: 45px;
+  font-weight: bold;
+  color: white;
+  width: 50px;
+  margin: 2px;
+  padding: 5px;
+}
+
+.subject-seats {
+  text-align: center;
+  vertical-align: middle;
+  font-weight: bold;
+  color: white;
+  background-color: grey;
+  width: 50px;
+  margin: 10px;
+  padding: 5px;
+}
+
+.subject-seats-number {
+  font-size: 30px;
+}
+
+mat-icon {
+  width:auto;
+  height: auto;
+  font-size: 16px;
+  vertical-align: middle;
+}
+
+.mat-line span {
+  vertical-align: middle;
+}
+
+@media (max-width: 860px){
+  .flex-container .flex-item {
+    width: 100%;
+  }
+}
+
+@media (min-width: 861px) {
+  .flex-container .flex-item {
+    width: 420px;
+  }
+}

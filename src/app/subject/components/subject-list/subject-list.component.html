@@ -1,3 +1,15 @@
-<p>
-  subject-list works!
-</p>
+<mat-nav-list class="flex-container">
+    <a class="flex-item" mat-list-item routerLink="/subjects/{{subjectItem.subjectId}}" *ngFor="let subjectItem of subjectList">
+      <img matListAvatar src="./assets/images/{{subjectItem.image}}.jpg" alt="a avatar">
+      <span matLine class="subject-title">{{subjectItem.title}}</span>
+      <div matLine>
+        <mat-icon>event</mat-icon>
+        <span>{{subjectItem.assessmentDate.toDateString()}}</span>
+      </div>
+      <div class="subject-seats">
+        <span class="subject-seats-number">{{subjectItem.numOfSeats}}</span>
+        <span>SEATS</span>
+      </div>
+      <div class="subject-category" [style.background-color]="subjectItem.color"><span>{{subjectItem.type}}</span></div>
+    </a>
+</mat-nav-list>

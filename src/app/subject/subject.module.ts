@@ -12,6 +12,7 @@ import { SubjectService } from './services/subject.service';
 @NgModule({
   imports: [
     CommonModule,
+    MaterialModule,
     SubjectRoutingModule
   ],
   declarations: [
