@@ -13,7 +13,7 @@ export const appRouterAnimation = trigger('routerAnimation', [
       ], { optional: true })
     ])
   ]),
-  transition('subject-details => *', [
+  transition('* => dashboard', [
     group([
       query(':enter', [
         style({ transform: 'translateX(100%)', position: 'fixed' }),
