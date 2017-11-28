@@ -7,7 +7,7 @@ import { DashboardItem } from '../models/dashboard-item';
 @Injectable()
 export class DashboardService {
 
-  subjectsSummary: DashboardItem[] = [
+  dashboard: DashboardItem[] = [
     {
       subjectId: 1, title: 'History', assessmentDate: new Date(2018, 4),
       numOfSeats: 680, numOfTutors: 345, numOfTests: 390, image: 'history'
@@ -45,6 +45,6 @@ export class DashboardService {
   constructor() { }
 
   getDashboard(): Observable<DashboardItem[]> {
-    return of(this.subjectsSummary);
+    return of(this.dashboard);
   }
 }
