@@ -1,5 +1,5 @@
 export class DashboardItem {
-  id: number;
+  subjectId: number;
   title: string;
   assessmentDate: Date;
   numOfSeats: number;
