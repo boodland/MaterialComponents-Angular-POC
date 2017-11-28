@@ -8,5 +8,11 @@
     </button>
   </div>
   <span class="navbar-title">{{title}}</span>
-  <div class="navbar-action"></div>
+  <button *ngIf="location?.path() !== '/dashboard'; else noAction" mat-icon-button routerLink="/dashboard"   class="navbar-action">
+    <mat-icon aria-label="menu">apps</mat-icon>
+  </button>
+  <ng-template #noAction>
+    <div class="navbar-action"></div>
+  </ng-template>
+
 </mat-toolbar>
