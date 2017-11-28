@@ -20,10 +20,6 @@ export class AppComponent implements AfterViewInit {
   @ViewChild('myScrollContainer') myScrollContainer: ElementRef;
 
   constructor(private router: Router) {
-
-    const element = document.getElementsByTagName('mat-sidenav-content');
-    console.log(element);
-
     this.router.events
     .filter(event => event instanceof NavigationStart)
     .subscribe((event) => {
