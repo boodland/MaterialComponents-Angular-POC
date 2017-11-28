@@ -14,3 +14,9 @@ body {
 .mat-chip-list-wrapper {
   justify-content: space-around;
 }
+
+.flex-container {
+  display: flex !important;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
