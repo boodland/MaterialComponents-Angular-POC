@@ -7,7 +7,7 @@ import { SubjectDetailsComponent } from '../subject/components/subject-details/s
 
 const subjectRoutes: Routes = [
   {
-    path: 'subjects', component: SubjectComponent,
+    path: '', component: SubjectComponent,
     children: [
       { path: '', component: SubjectListComponent, data: { state: 'subjects-list' } },
       { path: ':id', component: SubjectDetailsComponent, data: { state : 'subject-details'}  }
