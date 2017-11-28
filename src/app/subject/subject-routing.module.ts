@@ -8,7 +8,7 @@ const subjectRoutes: Routes = [
   {
     path: '',
     children: [
-      { path: '', component: SubjectListComponent, data: { state: 'subjects-list' } },
+      { path: '', component: SubjectListComponent, data: { state: 'subject-list' } },
       { path: ':id', component: SubjectDetailsComponent, data: { state : 'subject-details'}  }
     ]
   }
