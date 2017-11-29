@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { DashboardItem } from '../../models/dashboard-item';
 
 import { DashboardService } from '../../services/dashboard.service';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-dashboard-list',
@@ -11,13 +12,12 @@ import { DashboardService } from '../../services/dashboard.service';
 })
 export class DashboardListComponent implements OnInit {
 
-  dashboardList: DashboardItem[];
+  dashboardList: Observable<DashboardItem[]>;
 
   constructor(private subjectSummaryService: DashboardService) { }
 
   getDashboard() {
-    this.subjectSummaryService.getDashboard()
-      .subscribe(dashboardList => this.dashboardList = dashboardList);
+    this.dashboardList = this.subjectSummaryService.getDashboard();
   }
 
   ngOnInit() {

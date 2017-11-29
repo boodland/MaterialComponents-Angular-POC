@@ -1,5 +1,5 @@
 <mat-nav-list class="flex-container">
-    <a class="flex-item" mat-list-item routerLink="/subjects/{{subjectItem.subjectId}}" *ngFor="let subjectItem of subjectList">
+    <a class="flex-item" mat-list-item routerLink="/subjects/{{subjectItem.subjectId}}" *ngFor="let subjectItem of subjectList | async">
       <img matListAvatar src="./assets/images/{{subjectItem.image}}.jpg" alt="a avatar">
       <span matLine class="subject-title">{{subjectItem.title}}</span>
       <div matLine>

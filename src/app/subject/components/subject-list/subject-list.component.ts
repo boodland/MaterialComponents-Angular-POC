@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { SubjectService } from '../../services/subject.service';
 
 import { SubjectItem } from '../../models/subject-item';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-subject-list',
@@ -11,7 +12,7 @@ import { SubjectItem } from '../../models/subject-item';
 })
 export class SubjectListComponent implements OnInit {
 
-  subjectList: SubjectItem[];
+  subjectList: Observable<SubjectItem[]>;
 
   constructor(private subjectService: SubjectService) { }
 
@@ -20,7 +21,6 @@ export class SubjectListComponent implements OnInit {
   }
 
   getSubjects() {
-    this.subjectService.getSubjects()
-      .subscribe(subjectList => this.subjectList = subjectList);
+    this.subjectList = this.subjectService.getSubjects();
   }
 }
