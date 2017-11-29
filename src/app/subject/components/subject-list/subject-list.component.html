@@ -4,7 +4,7 @@
       <span matLine class="subject-title">{{subjectItem.title}}</span>
       <div matLine>
         <mat-icon>event</mat-icon>
-        <span>{{subjectItem.assessmentDate.toDateString()}}</span>
+        <span>{{subjectItem.assessmentDate | date}}</span>
       </div>
       <div class="subject-seats">
         <span class="subject-seats-number">{{subjectItem.numOfSeats}}</span>
