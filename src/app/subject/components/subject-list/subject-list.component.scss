@@ -1,9 +1,31 @@
+.flex-container {
+  justify-content: center;
+}
+
+.full-width {
+  width: 100%;
+}
+
 form {
   padding: 10px 16px 2px 16px;
 }
 
-.mat-form-field {
-  width: 100%;
+table {
+  table-layout: fixed;
+}
+
+td {
+  width: auto;
+}
+
+td:last-child {
+  width: 50px;
+  text-align: center;
+  vertical-align: baseline;
+}
+
+.icon-filter {
+  font-size: 50px;
 }
 
 .mat-list-item .mat-list-avatar {
@@ -56,14 +78,18 @@ mat-icon {
   vertical-align: middle;
 }
 
-@media (max-width: 860px){
+.flex-container .flex-item {
+  width: 100%;
+}
+
+@media (max-width: 850px){
   .flex-container .flex-item {
     width: 100%;
   }
 }
 
-@media (min-width: 861px) {
+@media (min-width: 851px) {
   .flex-container .flex-item {
-    width: 420px;
+    max-width: 420px;
   }
 }

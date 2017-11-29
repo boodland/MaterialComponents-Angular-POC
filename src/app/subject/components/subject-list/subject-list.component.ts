@@ -14,6 +14,13 @@ import { SubjectItem } from '../../models/subject-item';
 export class SubjectListComponent implements OnInit {
 
   subjectList: Observable<SubjectItem[]>;
+  typeList = [
+    { text: 'None', value: '' },
+    { text: 'A', value: 'A' },
+    { text: 'B', value: 'B' },
+    { text: 'C', value: 'C' },
+    { text: 'D', value: 'D' },
+  ];
 
   constructor(private subjectService: SubjectService) { }
 
@@ -25,16 +32,19 @@ export class SubjectListComponent implements OnInit {
     this.subjectList = this.subjectService.getSubjects();
   }
 
-  getFilteredSubjects(title: string): Observable<SubjectItem[]> {
-    let filteredSubjects = this.subjectList;
-    if (title) {
-     filteredSubjects = this.subjectList
-      .map(subjectList =>
-        subjectList.filter(subjectItem =>
-          subjectItem.title.toLowerCase().includes(title.toLowerCase())
-        )
+  getFilteredSubjects(title: string, typeValue: string): Observable<SubjectItem[]> {
+    return this.subjectList
+      .map(subjectList => subjectList
+        .filter(subject => this.filterSubjectBy(subject, title, typeValue))
        );
-    }
-    return filteredSubjects;
+  }
+
+  filterSubjectBy(subject: SubjectItem, title: string, typeValue): boolean {
+    let isValid = !title || subject.title.toLowerCase().includes(title.toLowerCase());
+
+    isValid = isValid &&
+      (!typeValue || subject.type === typeValue);
+
+    return isValid;
   }
 }

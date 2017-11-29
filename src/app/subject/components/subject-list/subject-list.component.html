@@ -1,11 +1,30 @@
 <form>
-  <mat-form-field>
-    <input type="text" #titleFilter matInput placeholder="Title">
-    <mat-icon matSuffix>search</mat-icon>
-  </mat-form-field>
+  <table class="full-width" cellspacing="0">
+    <tr>
+      <td colspan="2">
+        <mat-form-field class="full-width">
+          <input type="text" #titleFilter matInput placeholder="Title">
+          <button mat-button *ngIf="titleFilter.value" matSuffix mat-icon-button aria-label="Clear" (click)="titleFilter.value=''">
+            <mat-icon>close</mat-icon>
+          </button>
+        </mat-form-field>
+      </td>
+      <td>
+        <mat-form-field class="full-width">
+          <mat-select #typeFilter placeholder="Type">
+            <mat-option *ngFor='let typeItem of typeList' value="{{typeItem.value}}">
+              {{typeItem.text}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </td>
+      <td><mat-icon class="icon-filter">search</mat-icon></td>
+    </tr>
+  </table>
 </form>
 <mat-nav-list class="flex-container">
-  <a class="flex-item" mat-list-item routerLink="/subjects/{{subjectItem.subjectId}}" *ngFor="let subjectItem of getFilteredSubjects(titleFilter.value) | async">
+  <a class="flex-item" mat-list-item routerLink="/subjects/{{subjectItem.subjectId}}"
+  *ngFor="let subjectItem of getFilteredSubjects(titleFilter.value, typeFilter.selected?.value) | async">
     <img matListAvatar src="./assets/images/{{subjectItem.image}}.jpg" alt="a avatar">
     <span matLine class="subject-title">{{subjectItem.title}}</span>
     <div matLine>
