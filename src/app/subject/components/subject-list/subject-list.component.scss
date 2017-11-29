@@ -1,3 +1,11 @@
+form {
+  padding: 10px 16px 2px 16px;
+}
+
+.mat-form-field {
+  width: 100%;
+}
+
 .mat-list-item .mat-list-avatar {
   border-radius: 0;
   height: 80%;
@@ -9,15 +17,17 @@ span.subject-title.mat-line {
   font-weight: bold;
 }
 
-.subject-category {
+.subject-type {
   text-align: center;
   vertical-align: middle;
-  font-size: 45px;
   font-weight: bold;
   color: white;
   width: 50px;
-  margin: 2px;
   padding: 5px;
+}
+
+.subject-type-name {
+  font-size: 30px;
 }
 
 .subject-seats {
@@ -27,7 +37,7 @@ span.subject-title.mat-line {
   color: white;
   background-color: grey;
   width: 50px;
-  margin: 10px;
+  margin: 5px;
   padding: 5px;
 }
 

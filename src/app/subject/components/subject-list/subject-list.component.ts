@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/map';
 
 import { SubjectService } from '../../services/subject.service';
 
 import { SubjectItem } from '../../models/subject-item';
-import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-subject-list',
@@ -22,5 +23,18 @@ export class SubjectListComponent implements OnInit {
 
   getSubjects() {
     this.subjectList = this.subjectService.getSubjects();
+  }
+
+  getFilteredSubjects(title: string): Observable<SubjectItem[]> {
+    let filteredSubjects = this.subjectList;
+    if (title) {
+     filteredSubjects = this.subjectList
+      .map(subjectList =>
+        subjectList.filter(subjectItem =>
+          subjectItem.title.toLowerCase().includes(title.toLowerCase())
+        )
+       );
+    }
+    return filteredSubjects;
   }
 }

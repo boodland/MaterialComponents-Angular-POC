@@ -1,15 +1,24 @@
+<form>
+  <mat-form-field>
+    <input type="text" #titleFilter matInput placeholder="Title">
+    <mat-icon matSuffix>search</mat-icon>
+  </mat-form-field>
+</form>
 <mat-nav-list class="flex-container">
-    <a class="flex-item" mat-list-item routerLink="/subjects/{{subjectItem.subjectId}}" *ngFor="let subjectItem of subjectList | async">
-      <img matListAvatar src="./assets/images/{{subjectItem.image}}.jpg" alt="a avatar">
-      <span matLine class="subject-title">{{subjectItem.title}}</span>
-      <div matLine>
-        <mat-icon>event</mat-icon>
-        <span>{{subjectItem.assessmentDate | date}}</span>
-      </div>
-      <div class="subject-seats">
-        <span class="subject-seats-number">{{subjectItem.numOfSeats}}</span>
-        <span>SEATS</span>
-      </div>
-      <div class="subject-category" [style.background-color]="subjectItem.color"><span>{{subjectItem.type}}</span></div>
-    </a>
+  <a class="flex-item" mat-list-item routerLink="/subjects/{{subjectItem.subjectId}}" *ngFor="let subjectItem of getFilteredSubjects(titleFilter.value) | async">
+    <img matListAvatar src="./assets/images/{{subjectItem.image}}.jpg" alt="a avatar">
+    <span matLine class="subject-title">{{subjectItem.title}}</span>
+    <div matLine>
+      <mat-icon>event</mat-icon>
+      <span>{{subjectItem.assessmentDate | date}}</span>
+    </div>
+    <div class="subject-seats">
+      <span class="subject-seats-number">{{subjectItem.numOfSeats}}</span>
+      <span>SEATS</span>
+    </div>
+    <div class="subject-type" [style.background-color]="subjectItem.color">
+      <span class="subject-type-name">{{subjectItem.type}}</span>
+      <span>TYPE</span>
+    </div>
+  </a>
 </mat-nav-list>
