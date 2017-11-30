@@ -12,12 +12,12 @@ import { Observable } from 'rxjs/Observable';
 })
 export class DashboardListComponent implements OnInit {
 
-  dashboardList: Observable<DashboardItem[]>;
+  dashboardList$: Observable<DashboardItem[]>;
 
   constructor(private subjectSummaryService: DashboardService) { }
 
   getDashboard() {
-    this.dashboardList = this.subjectSummaryService.getDashboard();
+    this.dashboardList$ = this.subjectSummaryService.getDashboard();
   }
 
   ngOnInit() {

@@ -1,6 +1,6 @@
 
 <div class="flex-container">
-  <mat-card class="flex-item" *ngFor="let dashboardItem of dashboardList | async">
+  <mat-card class="flex-item" *ngFor="let dashboardItem of dashboardList$ | async">
       <mat-card-header>
         <mat-card-title>{{dashboardItem.title | uppercase}}</mat-card-title>
         <mat-card-subtitle>

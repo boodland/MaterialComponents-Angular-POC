@@ -13,7 +13,7 @@ import { SubjectItem } from '../../models/subject-item';
 })
 export class SubjectListComponent implements OnInit {
 
-  subjectList: Observable<SubjectItem[]>;
+  subjectList$: Observable<SubjectItem[]>;
   typeList = [
     { text: 'None', value: '' },
     { text: 'A', value: 'A' },
@@ -29,11 +29,11 @@ export class SubjectListComponent implements OnInit {
   }
 
   getSubjects() {
-    this.subjectList = this.subjectService.getSubjects();
+    this.subjectList$ = this.subjectService.getSubjects();
   }
 
   getFilteredSubjects(title: string, typeValue: string): Observable<SubjectItem[]> {
-    return this.subjectList
+    return this.subjectList$
       .map(subjectList => subjectList
         .filter(subject => this.filterSubjectBy(subject, title, typeValue))
        );
