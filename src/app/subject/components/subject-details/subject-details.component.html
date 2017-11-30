@@ -1,3 +1,85 @@
-<p>
-  Showing details of subject with id {{selectedSubject}}!
-</p>
+<div *ngIf="selectedSubject$ | async as selectedSubject">
+  <mat-toolbar [style.background]="white">
+    <img src="./assets/images/{{selectedSubject.image}}.jpg">
+    <div class="subject-title">{{selectedSubject.title | uppercase}}</div>
+    <div class="subject-type" [style.background-color]="selectedSubject.color">
+      {{selectedSubject.type}}
+    </div>
+  </mat-toolbar>
+  <mat-accordion>
+    <mat-expansion-panel [expanded]="step === 0" hideToggle="true">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Overview
+        </mat-panel-title>
+        <mat-panel-description>
+          {{selectedSubject.numOfSeats}} SEATS
+          <mat-icon>info_outline</mat-icon>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <p>
+        This subject is blah blah blah
+        <br/>
+        Blah blah blah...
+        <br/>
+        More blah blah blah
+      </p>
+    </mat-expansion-panel>
+    <mat-expansion-panel [expanded]="step === 0" hideToggle="true">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Assessment Date
+        </mat-panel-title>
+        <mat-panel-description>
+         {{selectedSubject.assessmentDate | date}}
+          <mat-icon>event</mat-icon>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <span>
+        <label>City:</label>A city in the world
+      </span>
+      <span>
+        <label>Address:</label> Somewhere in the city
+      </span>
+      <span>
+        <label>Time:</label> At a specific time in the address
+      </span>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel [expanded]="step === 1" hideToggle="true">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Requirements
+        </mat-panel-title>
+        <mat-panel-description>
+          Mandatory to have them
+          <mat-icon>report_problem</mat-icon>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+
+      <span>Requirement 1</span>
+      <span>Requirement 2</span>
+      <span>Requirement 3</span>
+      <span>Requirement 4</span>
+      <span>Requirement 5</span>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel [expanded]="step === 2" hideToggle="true">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Syllabus
+        </mat-panel-title>
+        <mat-panel-description>
+          <span></span>
+          <mat-icon>library_books</mat-icon>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <span>Lesson 1</span>
+      <span>Lesson 2</span>
+      <span>Lesson 3</span>
+      <span>Lesson 4</span>
+      <span>Lesson 5</span>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>
+

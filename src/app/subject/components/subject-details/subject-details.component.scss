@@ -1,0 +1,38 @@
+mat-panel-description, mat-toolbar {
+  justify-content: space-between;
+  align-items: center;
+}
+
+mat-toolbar {
+  padding: 5px 24px;
+  background-color: white;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+mat-panel-title {
+  width: 25vw;
+  flex-grow: 0;
+  align-items: center;
+}
+
+mat-panel-description {
+  margin-right: 0;
+}
+
+img {
+  height: 100%;
+}
+
+.subject-type {
+  text-align: center;
+  vertical-align: middle;
+  color: white;
+  padding: 5px;
+  font-size: 40px;
+}
+
+span {
+  display:block;
+  margin-bottom: 5px;
+}

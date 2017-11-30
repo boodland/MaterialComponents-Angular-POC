@@ -47,4 +47,8 @@ export class SubjectService {
     return of(this.subjects);
   }
 
+  getSubject(subjectId: number) {
+    return of(this.subjects.find(subject => subject.subjectId === subjectId));
+  }
+
 }
