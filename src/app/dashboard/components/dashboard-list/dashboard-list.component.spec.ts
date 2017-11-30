@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { APP_BASE_HREF } from '@angular/common';
 
-import { MaterialModule } from '../../../shared/material.module';
+import { AppMaterialModule } from '../../../app-material.module';
 import { DashboardRoutingModule } from '../../dashboard-routing.module';
 import { AppRoutingModule } from '../../../app-routing.module';
 
@@ -16,7 +16,7 @@ describe('DashboardListComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        MaterialModule,
+        AppMaterialModule,
         DashboardRoutingModule,
         AppRoutingModule
       ],

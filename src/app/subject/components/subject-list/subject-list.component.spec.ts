@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { APP_BASE_HREF } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { MaterialModule } from '../../../shared/material.module';
+import { AppMaterialModule } from '../../../app-material.module';
 import { AppRoutingModule } from '../../../app-routing.module';
 
 import { SubjectListComponent } from './subject-list.component';
@@ -17,7 +17,7 @@ describe('SubjectListComponent', () => {
     TestBed.configureTestingModule({
       imports: [
         BrowserAnimationsModule,
-        MaterialModule,
+        AppMaterialModule,
         AppRoutingModule
       ],
       declarations: [ SubjectListComponent ],

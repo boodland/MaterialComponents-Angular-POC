@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { APP_BASE_HREF } from '@angular/common';
 
-import { MaterialModule } from '../../../shared/material.module';
+import { AppMaterialModule } from '../../../app-material.module';
 import { AppRoutingModule } from '../../../app-routing.module';
 
 import { NavbarActionsComponent } from './navbar-actions.component';
@@ -13,7 +13,7 @@ describe('NavbarActionsComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        MaterialModule,
+        AppMaterialModule,
         AppRoutingModule
       ],
       declarations: [ NavbarActionsComponent ],

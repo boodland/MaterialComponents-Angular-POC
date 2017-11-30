@@ -42,4 +42,4 @@ import {
     MatSelectModule
   ]
 })
-export class MaterialModule {}
+export class AppMaterialModule {}

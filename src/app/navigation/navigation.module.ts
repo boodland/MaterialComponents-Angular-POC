@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
-import { MaterialModule } from './../shared/material.module';
+import { AppMaterialModule } from './../app-material.module';
 
 import { NavbarHeaderComponent } from './components/navbar-header/navbar-header.component';
 import { NavbarActionsComponent } from './components/navbar-actions/navbar-actions.component';
@@ -10,7 +10,7 @@ import { NavbarActionsComponent } from './components/navbar-actions/navbar-actio
 @NgModule({
   imports: [
     CommonModule,
-    MaterialModule,
+    AppMaterialModule,
     RouterModule
   ],
   declarations: [
