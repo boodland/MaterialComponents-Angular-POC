@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { APP_BASE_HREF } from '@angular/common';
 
-import { SubjectRoutingModule } from '../../subject-routing.module';
+import { MaterialModule } from '../../../shared/material.module';
 import { AppRoutingModule } from '../../../app-routing.module';
 
 import { SubjectDetailsComponent } from './subject-details.component';
@@ -13,7 +13,7 @@ describe('SubjectDetailsComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        SubjectRoutingModule,
+        MaterialModule,
         AppRoutingModule
       ],
       declarations: [ SubjectDetailsComponent ],

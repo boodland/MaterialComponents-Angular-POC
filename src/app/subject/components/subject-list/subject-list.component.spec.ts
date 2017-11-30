@@ -1,6 +1,13 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { APP_BASE_HREF } from '@angular/common';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { MaterialModule } from '../../../shared/material.module';
+import { AppRoutingModule } from '../../../app-routing.module';
 
 import { SubjectListComponent } from './subject-list.component';
+
+import { SubjectService } from '../../services/subject.service';
 
 describe('SubjectListComponent', () => {
   let component: SubjectListComponent;
@@ -8,7 +15,15 @@ describe('SubjectListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SubjectListComponent ]
+      imports: [
+        BrowserAnimationsModule,
+        MaterialModule,
+        AppRoutingModule
+      ],
+      declarations: [ SubjectListComponent ],
+      providers: [
+        SubjectService,
+        { provide: APP_BASE_HREF, useValue: '/' }]
     })
     .compileComponents();
   }));
