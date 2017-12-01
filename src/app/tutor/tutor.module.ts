@@ -3,6 +3,9 @@ import { CommonModule } from '@angular/common';
 
 import { AppMaterialModule } from './../app-material.module';
 import { TutorRoutingModule } from './tutor-routing.module';
+
+import { TutorListComponent } from './components/tutor-list/tutor-list.component';
+
 import { TutorService } from './services/tutor.service';
 
 @NgModule({
@@ -11,7 +14,7 @@ import { TutorService } from './services/tutor.service';
     AppMaterialModule,
     TutorRoutingModule
   ],
-  declarations: [],
+  declarations: [TutorListComponent],
   providers: [TutorService]
 })
 export class TutorModule { }
