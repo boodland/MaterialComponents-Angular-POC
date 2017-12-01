@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
+
+import { TutorService } from '../../services/tutor.service';
+
+import { ITutorItem } from '../../models/tutor-item.interface';
 
 @Component({
   selector: 'app-tutor-list',
@@ -7,9 +12,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TutorListComponent implements OnInit {
 
-  constructor() { }
+  tutorList$: Observable<ITutorItem[]>;
+
+  constructor(private tutorService: TutorService) { }
 
   ngOnInit() {
+    this.getTutors();
+  }
+
+  getTutors() {
+    this.tutorList$ = this.tutorService.getTutors();
   }
 
 }

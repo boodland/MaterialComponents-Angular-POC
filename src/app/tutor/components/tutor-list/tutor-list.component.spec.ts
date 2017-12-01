@@ -1,6 +1,11 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {HttpClientModule} from '@angular/common/http';
+
+import { AppMaterialModule } from '../../../app-material.module';
 
 import { TutorListComponent } from './tutor-list.component';
+
+import { TutorService } from '../../services/tutor.service';
 
 describe('TutorListComponent', () => {
   let component: TutorListComponent;
@@ -8,7 +13,12 @@ describe('TutorListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TutorListComponent ]
+      imports: [
+        HttpClientModule,
+        AppMaterialModule
+      ],
+      declarations: [TutorListComponent],
+      providers: [TutorService]
     })
     .compileComponents();
   }));

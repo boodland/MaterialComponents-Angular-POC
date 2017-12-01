@@ -1,3 +1,6 @@
-<p>
-  tutor-list works!
-</p>
+<mat-list>
+  <mat-list-item *ngFor="let tutor of tutorList$ | async">
+    <img matListAvatar src="{{tutor.thumbnail}}">
+    <h3 matLine> {{tutor.fullName}} </h3>
+  </mat-list-item>
+</mat-list>
