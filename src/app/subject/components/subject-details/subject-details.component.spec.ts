@@ -6,6 +6,8 @@ import { AppRoutingModule } from '../../../app-routing.module';
 
 import { SubjectDetailsComponent } from './subject-details.component';
 
+import { SubjectService } from '../../services/subject.service';
+
 describe('SubjectDetailsComponent', () => {
   let component: SubjectDetailsComponent;
   let fixture: ComponentFixture<SubjectDetailsComponent>;
@@ -17,7 +19,10 @@ describe('SubjectDetailsComponent', () => {
         AppRoutingModule
       ],
       declarations: [ SubjectDetailsComponent ],
-      providers: [ { provide: APP_BASE_HREF, useValue: '/' } ]
+      providers: [
+        SubjectService,
+        { provide: APP_BASE_HREF, useValue: '/' }
+      ]
     })
     .compileComponents();
   }));
