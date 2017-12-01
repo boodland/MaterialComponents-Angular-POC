@@ -1,18 +1,20 @@
 <mat-toolbar color="primary" class="navbar-container">
-  <div [ngSwitch]="location?.path()">
-    <button *ngSwitchCase="'/dashboard'" mat-icon-button (click)="menuClick()" class="navbar-action">
-      <mat-icon aria-label="menu">menu</mat-icon>
+  <div class="flex-container">
+    <div [ngSwitch]="location?.path()">
+      <button *ngSwitchCase="'/dashboard'" mat-icon-button (click)="menuClick()" class="navbar-action">
+        <mat-icon aria-label="menu">menu</mat-icon>
+      </button>
+      <button *ngSwitchDefault mat-icon-button (click)="goBack()" class="navbar-action">
+        <mat-icon aria-label="menu">arrow_back</mat-icon>
+      </button>
+    </div>
+    <span class="navbar-title">{{title}}</span>
+    <button *ngIf="location?.path() !== '/dashboard'; else noAction" mat-icon-button routerLink="/dashboard"
+      class="navbar-action">
+      <mat-icon aria-label="menu">apps</mat-icon>
     </button>
-    <button *ngSwitchDefault mat-icon-button (click)="goBack()" class="navbar-action">
-      <mat-icon aria-label="menu">arrow_back</mat-icon>
-    </button>
+    <ng-template #noAction>
+      <div class="navbar-action"></div>
+    </ng-template>
   </div>
-  <span class="navbar-title">{{title}}</span>
-  <button *ngIf="location?.path() !== '/dashboard'; else noAction" mat-icon-button routerLink="/dashboard"   class="navbar-action">
-    <mat-icon aria-label="menu">apps</mat-icon>
-  </button>
-  <ng-template #noAction>
-    <div class="navbar-action"></div>
-  </ng-template>
-
 </mat-toolbar>
