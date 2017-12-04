@@ -20,7 +20,7 @@ export class TutorService {
         .map(randomUser => this.convertToTutorItem(randomUser)));
   }
 
-  convertToTutorItem(randomUser): ITutorItem {
+  private convertToTutorItem(randomUser): ITutorItem {
     return {
       fullName: `${randomUser.name.first} ${randomUser.name.last}`,
       thumbnail: randomUser.picture.thumbnail,
