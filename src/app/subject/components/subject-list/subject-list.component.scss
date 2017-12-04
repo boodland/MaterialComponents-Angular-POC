@@ -82,12 +82,6 @@ mat-icon {
   width: 100%;
 }
 
-@media (max-width: 850px){
-  .flex-container .flex-item {
-    width: 100%;
-  }
-}
-
 @media (min-width: 851px) {
   .flex-container .flex-item {
     max-width: 420px;
