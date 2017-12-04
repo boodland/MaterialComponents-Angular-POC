@@ -2,9 +2,12 @@
   <a class="flex-item" mat-list-item routerLink="/tutors/{{i}}"
     *ngFor="let tutor of tutorList$ | async; let i = index">
     <img matListAvatar src="{{tutor.thumbnail}}">
-    <h3 matLine> {{tutor.fullName}} </h3>
-    <mat-icon class="rating-icon" *ngFor="let ratingStar of getRatingStars(tutor.rating)">
-      {{ratingStar}}
-    </mat-icon>
+    <span matLine class="tutor-fullname"> {{tutor.fullName | uppercase}} </span>
+    <div matLine>
+      <mat-icon class="rating-icon" *ngFor="let ratingStar of getRatingStars(tutor.rating)">
+        {{ratingStar}}
+      </mat-icon>
+    </div>
+    <button mat-raised-button color="warn" (click)="contact($event)">Contact</button>
   </a>
 </mat-nav-list>

@@ -30,4 +30,9 @@ export class TutorListComponent implements OnInit {
     return stars.concat(emptyStars);
   }
 
+  contact(event) {
+    event.preventDefault();
+    event.stopPropagation();
+ }
+
 }
