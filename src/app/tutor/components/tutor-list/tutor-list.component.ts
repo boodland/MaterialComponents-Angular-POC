@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
-
-import { TutorService } from '../../services/tutor.service';
+import { ActivatedRoute } from '@angular/router';
 
 import { ITutorItem } from '../../models/tutor-item.interface';
 
@@ -14,14 +13,14 @@ export class TutorListComponent implements OnInit {
 
   tutorList$: Observable<ITutorItem[]>;
 
-  constructor(private tutorService: TutorService) { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.getTutors();
   }
 
   getTutors() {
-    this.tutorList$ = this.tutorService.getTutors();
+    this.tutorList$ = this.route.data.map(data => data.tutors);
   }
 
   getRatingStars(rating: number): string[] {

@@ -7,6 +7,7 @@ import { TutorRoutingModule } from './tutor-routing.module';
 import { TutorListComponent } from './components/tutor-list/tutor-list.component';
 
 import { TutorService } from './services/tutor.service';
+import { TutorResolverService } from './services/tutor-resolver.service';
 
 @NgModule({
   imports: [
@@ -15,6 +16,9 @@ import { TutorService } from './services/tutor.service';
     TutorRoutingModule
   ],
   declarations: [TutorListComponent],
-  providers: [TutorService]
+  providers: [
+    TutorService,
+    TutorResolverService
+  ]
 })
 export class TutorModule { }
