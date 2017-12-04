@@ -1,9 +1,10 @@
-<mat-list>
-  <mat-list-item *ngFor="let tutor of tutorList$ | async">
+<mat-nav-list class="flex-container">
+  <a class="flex-item" mat-list-item routerLink="/tutors/{{i}}"
+    *ngFor="let tutor of tutorList$ | async; let i = index">
     <img matListAvatar src="{{tutor.thumbnail}}">
     <h3 matLine> {{tutor.fullName}} </h3>
     <mat-icon class="rating-icon" *ngFor="let ratingStar of getRatingStars(tutor.rating)">
       {{ratingStar}}
     </mat-icon>
-  </mat-list-item>
-</mat-list>
+  </a>
+</mat-nav-list>
