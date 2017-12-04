@@ -1,4 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+import { APP_BASE_HREF } from '@angular/common';
 import {HttpClientModule} from '@angular/common/http';
 
 import { AppMaterialModule } from '../../../app-material.module';
@@ -15,10 +17,14 @@ describe('TutorListComponent', () => {
     TestBed.configureTestingModule({
       imports: [
         HttpClientModule,
-        AppMaterialModule
+        AppMaterialModule,
+        RouterTestingModule
       ],
       declarations: [TutorListComponent],
-      providers: [TutorService]
+      providers: [
+        TutorService,
+        { provide: APP_BASE_HREF, useValue: '/' }
+      ]
     })
     .compileComponents();
   }));

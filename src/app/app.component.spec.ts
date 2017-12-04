@@ -1,10 +1,10 @@
 import { TestBed, async } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 import { APP_BASE_HREF } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppMaterialModule } from './app-material.module';
 import { NavigationModule } from './navigation/navigation.module';
-import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 
@@ -15,7 +15,7 @@ describe('AppComponent', () => {
         BrowserAnimationsModule,
         AppMaterialModule,
         NavigationModule,
-        AppRoutingModule
+        RouterTestingModule
       ],
       declarations: [ AppComponent ],
       providers: [ { provide: APP_BASE_HREF, useValue: '/' } ]

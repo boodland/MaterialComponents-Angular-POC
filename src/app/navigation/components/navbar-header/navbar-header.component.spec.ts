@@ -1,9 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 import { APP_BASE_HREF } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppMaterialModule } from '../../../app-material.module';
-import { AppRoutingModule } from '../../../app-routing.module';
 
 import { NavbarHeaderComponent } from './navbar-header.component';
 
@@ -17,7 +17,7 @@ describe('NavbarHeaderComponent', () => {
       imports: [
         BrowserAnimationsModule,
         AppMaterialModule,
-        AppRoutingModule
+        RouterTestingModule
       ],
       declarations: [ NavbarHeaderComponent ],
       providers: [ { provide: APP_BASE_HREF, useValue: '/' } ]

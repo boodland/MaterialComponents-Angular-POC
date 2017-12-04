@@ -1,9 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 import { APP_BASE_HREF } from '@angular/common';
 
 import { AppMaterialModule } from '../../../app-material.module';
 import { DashboardRoutingModule } from '../../dashboard-routing.module';
-import { AppRoutingModule } from '../../../app-routing.module';
 
 import { DashboardListComponent } from './dashboard-list.component';
 
@@ -18,7 +18,7 @@ describe('DashboardListComponent', () => {
       imports: [
         AppMaterialModule,
         DashboardRoutingModule,
-        AppRoutingModule
+        RouterTestingModule
       ],
       declarations: [ DashboardListComponent ],
       providers: [
