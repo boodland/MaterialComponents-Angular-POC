@@ -24,4 +24,10 @@ export class TutorListComponent implements OnInit {
     this.tutorList$ = this.tutorService.getTutors();
   }
 
+  getRatingStars(rating: number): string[] {
+    const stars = Array(rating).fill('star');
+    const emptyStars = Array(5 - rating).fill('star_border');
+    return stars.concat(emptyStars);
+  }
+
 }

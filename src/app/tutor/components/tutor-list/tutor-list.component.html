@@ -2,5 +2,8 @@
   <mat-list-item *ngFor="let tutor of tutorList$ | async">
     <img matListAvatar src="{{tutor.thumbnail}}">
     <h3 matLine> {{tutor.fullName}} </h3>
+    <mat-icon class="rating-icon" *ngFor="let ratingStar of getRatingStars(tutor.rating)">
+      {{ratingStar}}
+    </mat-icon>
   </mat-list-item>
 </mat-list>

@@ -14,7 +14,7 @@ export class TutorService {
 
   getTutors(): Observable<ITutorItem[]> {
     return this.http.get(this.WEB_API_ADRESS, {
-      params: new HttpParams().set('results', '50'),
+      params: new HttpParams().set('results', '25'),
     })
       .map(res => res['results']
         .map(randomUser => this.convertToTutorItem(randomUser)));
@@ -23,7 +23,8 @@ export class TutorService {
   convertToTutorItem(randomUser): ITutorItem {
     return {
       fullName: `${randomUser.name.first} ${randomUser.name.last}`,
-      thumbnail: randomUser.picture.thumbnail
+      thumbnail: randomUser.picture.thumbnail,
+      rating: Math.floor(Math.random() * 5) + 1
     };
   }
 
