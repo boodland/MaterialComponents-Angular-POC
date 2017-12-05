@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 import { ITutorItem } from '../../models/tutor-item.interface';
 
@@ -13,7 +13,7 @@ export class TutorListComponent implements OnInit {
 
   tutorList$: Observable<ITutorItem[]>;
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
     this.getTutors();
@@ -32,6 +32,7 @@ export class TutorListComponent implements OnInit {
   contact(event) {
     event.preventDefault();
     event.stopPropagation();
+    this.router.navigate([{ outlets: { dialog: ['dialog'] } }], { skipLocationChange: true });
  }
 
 }
