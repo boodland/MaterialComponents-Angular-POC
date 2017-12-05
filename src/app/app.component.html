@@ -3,6 +3,7 @@
     <app-navbar-actions (actionClickEvent)="sidenav.close()"></app-navbar-actions>
   </mat-sidenav>
   <div #myScrollContainer>
+    <app-loader-progress-bar></app-loader-progress-bar>
     <app-navbar-header (menuClickEvent)="sidenav.open()"></app-navbar-header>
     <main  class="app-main-container"
       [@routerAnimation]="{value: getState(routerOutlet), params: {topPosition: topPosition}}">
