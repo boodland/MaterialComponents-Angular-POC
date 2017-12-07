@@ -9,6 +9,8 @@ import { SubjectDetailsComponent } from './components/subject-details/subject-de
 
 import { SubjectService } from './services/subject.service';
 
+import { AppHighlightSearchTermDirective } from '../app-highlight-search-term.directive';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -17,7 +19,8 @@ import { SubjectService } from './services/subject.service';
   ],
   declarations: [
     SubjectListComponent,
-    SubjectDetailsComponent
+    SubjectDetailsComponent,
+    AppHighlightSearchTermDirective
   ],
   providers: [SubjectService]
 })

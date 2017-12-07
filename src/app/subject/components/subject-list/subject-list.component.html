@@ -26,7 +26,8 @@
   <a class="flex-item" mat-list-item routerLink="/subjects/{{subjectItem.subjectId}}"
   *ngFor="let subjectItem of getFilteredSubjects(titleFilter.value, typeFilter.selected?.value) | async">
     <img matListAvatar src="./assets/images/{{subjectItem.image}}.jpg" alt="a avatar">
-    <span matLine class="subject-title">{{subjectItem.title}}</span>
+    <span [appHighlightSearchTerm]='titleFilter.value'
+      matLine class="subject-title">{{subjectItem.title}}</span>
     <div matLine>
       <mat-icon>event</mat-icon>
       <span>{{subjectItem.assessmentDate | date}}</span>

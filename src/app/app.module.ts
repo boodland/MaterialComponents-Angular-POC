@@ -12,12 +12,9 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 
-import { AppHighlightSearchTermDirective } from './app-highlight-search-term.directive';
-
 @NgModule({
   declarations: [
-    AppComponent,
-    AppHighlightSearchTermDirective
+    AppComponent
   ],
   imports: [
     BrowserModule,
