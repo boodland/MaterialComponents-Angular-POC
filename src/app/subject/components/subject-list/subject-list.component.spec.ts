@@ -9,6 +9,8 @@ import { SubjectListComponent } from './subject-list.component';
 
 import { SubjectService } from '../../services/subject.service';
 
+import { AppHighlightSearchTermDirective } from '../../../app-highlight-search-term.directive';
+
 describe('SubjectListComponent', () => {
   let component: SubjectListComponent;
   let fixture: ComponentFixture<SubjectListComponent>;
@@ -20,7 +22,10 @@ describe('SubjectListComponent', () => {
         AppMaterialModule,
         RouterTestingModule
       ],
-      declarations: [ SubjectListComponent ],
+      declarations: [
+        SubjectListComponent,
+        AppHighlightSearchTermDirective
+      ],
       providers: [
         SubjectService,
         { provide: APP_BASE_HREF, useValue: '/' }]
