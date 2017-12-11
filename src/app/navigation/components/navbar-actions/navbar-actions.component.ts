@@ -10,8 +10,8 @@ export class NavbarActionsComponent implements OnInit {
   actions: any[] = [
     { title: 'Dashboard', link: '/dashboard', icon: 'apps' },
     { title: 'Subjects', link: '/subjects', icon: 'school' },
-    { title: 'Exams', link: '/exams', icon: 'edit' },
-    { title: 'Tutors', link: '/tutors', icon: 'person' }
+    { title: 'Tutors', link: '/tutors', icon: 'person' },
+    { title: 'Exams', link: '/exams', icon: 'edit' }
   ];
 
   @Output() actionClickEvent: EventEmitter<string> = new EventEmitter();
