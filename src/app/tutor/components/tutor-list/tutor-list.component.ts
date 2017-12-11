@@ -32,7 +32,15 @@ export class TutorListComponent implements OnInit {
   contact(event) {
     event.preventDefault();
     event.stopPropagation();
-    this.router.navigate([{ outlets: { dialog: ['dialog'] } }], { skipLocationChange: true });
+    this.router.navigate([
+      {
+        outlets: { dialog: ['dialog'] }
+      }
+    ], {
+        queryParams: { message: 'contact the tutor' },
+        skipLocationChange: true
+      }
+    );
  }
 
 }

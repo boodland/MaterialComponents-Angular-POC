@@ -1,5 +1,6 @@
-import { Component, AfterViewInit, ViewChild, TemplateRef } from '@angular/core';
+import { Component, AfterViewInit, ViewChild, TemplateRef, OnInit, OnDestroy } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
+import { Subscription } from 'rxjs/Subscription';
 import { MatDialog, MatDialogRef } from '@angular/material';
 
 @Component({
@@ -7,19 +8,33 @@ import { MatDialog, MatDialogRef } from '@angular/material';
   templateUrl: './dialog-message.component.html',
   styleUrls: ['./dialog-message.component.scss']
 })
-export class DialogMessageComponent implements AfterViewInit {
+export class DialogMessageComponent implements AfterViewInit, OnInit, OnDestroy {
 
   @ViewChild(TemplateRef) ref;
 
   dialogRef: MatDialogRef<DialogMessageComponent>;
+  message: string;
+  sub: Subscription;
 
-  constructor(private dialog: MatDialog, private router: Router) {
+  constructor(private dialog: MatDialog, private router: Router, private route: ActivatedRoute) {
+  }
+
+  ngOnInit() {
+    this.sub = this.route
+      .queryParams
+      .subscribe(params => {
+        this.message = params['message'] || 'proceed';
+      });
   }
 
   ngAfterViewInit() {
     setTimeout(
       () => { this.open(); }, 0
     );
+  }
+
+  ngOnDestroy() {
+    this.sub.unsubscribe();
   }
 
   open() {
