@@ -8,6 +8,7 @@ import { SubjectListComponent } from './components/subject-list/subject-list.com
 import { SubjectDetailsComponent } from './components/subject-details/subject-details.component';
 
 import { SubjectService } from './services/subject.service';
+import { AppAuthGuardService } from '../app-auth-guard.service';
 
 import { AppHighlightSearchTermDirective } from '../app-highlight-search-term.directive';
 
@@ -22,6 +23,9 @@ import { AppHighlightSearchTermDirective } from '../app-highlight-search-term.di
     SubjectDetailsComponent,
     AppHighlightSearchTermDirective
   ],
-  providers: [SubjectService]
+  providers: [
+    SubjectService,
+    AppAuthGuardService
+  ]
 })
 export class SubjectModule { }

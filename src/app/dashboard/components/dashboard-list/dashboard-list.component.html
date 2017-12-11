@@ -14,10 +14,12 @@
         <button mat-raised-button routerLink="/subjects/{{dashboardItem.subjectId}}">View Subject</button>
       </mat-card-content>
       <mat-chip-list>
-        <mat-chip color="primary" selected=true>
+        <mat-chip color="primary" selected=true
+        routerLink="/subjects/{{dashboardItem.subjectId}}/exams">
           {{dashboardItem.numOfExams}} Exams
         </mat-chip>
-        <mat-chip color="accent" selected=true>
+        <mat-chip color="accent" selected=true
+        routerLink="/subjects/{{dashboardItem.subjectId}}/tutors">
             {{dashboardItem.numOfTutors}} Tutors</mat-chip>
       </mat-chip-list>
     </mat-card>
