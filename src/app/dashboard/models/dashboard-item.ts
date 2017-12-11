@@ -4,6 +4,6 @@ export class DashboardItem {
   assessmentDate: Date;
   numOfSeats: number;
   numOfTutors: number;
-  numOfTests: number;
+  numOfExams: number;
   image: string;
 }

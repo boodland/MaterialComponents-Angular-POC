@@ -10,7 +10,7 @@ export class NavbarActionsComponent implements OnInit {
   actions: any[] = [
     { title: 'Dashboard', link: '/dashboard', icon: 'apps' },
     { title: 'Subjects', link: '/subjects', icon: 'school' },
-    { title: 'Tests', link: '/tests', icon: 'edit' },
+    { title: 'Exams', link: '/exams', icon: 'edit' },
     { title: 'Tutors', link: '/tutors', icon: 'person' }
   ];
 
