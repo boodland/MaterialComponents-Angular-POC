@@ -1,6 +1,8 @@
 # MaterialComponents-Angular-POC
 
-Proof Of Concept of an Angular app using [Angular Material](https://material.angular.io/) CSS framework
+Proof Of Concept of an Angular app using [Angular Material](https://material.angular.io/) CSS framework.
+
+The intent of this project is just to evaluate the different features/components of both frameworks. Any task related with testing, deploying, UX or any other development practice is out of the scope.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.0.
 
@@ -15,6 +17,8 @@ Run `ng generate component component-name` to generate a new component. You can 
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+
+The docs/ folder contains the production build of the project. 
 
 ## Running unit tests
 
