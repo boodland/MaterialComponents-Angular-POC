@@ -1,6 +1,6 @@
 # MaterialComponents-Angular-POC
 
-Proof Of Concept of an Angular app using [Angular Material](https://material.angular.io/) CSS framework.
+Proof Of Concept of an [Angular](https://angular.io/) app using [Angular Material](https://material.angular.io/) CSS framework.
 
 The intent of this project is just to evaluate the different features/components of both frameworks. Any task related with testing, deploying, UX or any other development practice is out of the scope.
 
